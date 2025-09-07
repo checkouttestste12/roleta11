@@ -448,6 +448,12 @@ body {
     border: 2px solid #ffd700;
     animation: rotateMini 3s linear infinite;
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Parar animação quando não estiver girando */
+.roleta-mini.parada {
+    animation: none;
 }
 
 @keyframes rotateMini {
@@ -888,6 +894,18 @@ body {
     max-width: 300px;
     font-weight: 500;
     font-size: 0.9rem;
+}
+
+/* Animação de confetes */
+@keyframes confeteFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
 }
 
 /* Utility Classes */
